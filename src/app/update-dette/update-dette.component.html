@@ -1,0 +1,33 @@
+<div class="main-content">
+    <div class="col-md-8 offset-md-3" >
+    <h1>Update Dette</h1>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+             <label>Name</label>
+             <input type="text"class="form-control"id="dettenom"
+                 [(ngModel)]="dette.name" name="dettenom">
+        </div>
+        <div class="form-group">
+             <label>Value</label>
+             <input type="text"class="form-control"id="dettevalue"
+                 [(ngModel)]="dette.value" name="dettevalue" >
+        </div>
+        <div class="form-group">
+             <label>Date</label>
+             <input type="text"class="form-control"id="dettedate"
+                 [(ngModel)]="dette.date" name="dettedate">
+        </div>
+        <div class="form-group">
+            <label>Pay_date</label>
+            <input type="text"class="form-control"id="dettepay_date"
+                [(ngModel)]="dette.pay_date" name="dettepay_date">
+        </div>
+        <div class="form-group">
+             <label>From</label>
+             <input type="text"class="form-control"id="dettefrom"
+               [(ngModel)]="dette.from" name="dettefrom">
+         </div>
+      <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+        </div>
+</div>

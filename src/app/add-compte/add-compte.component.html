@@ -1,0 +1,23 @@
+<div class="main-content">
+    <div class="col-md-8 offset-md-3" >
+        <h1>Add Compte</h1>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                 <label>Name</label>
+                 <input type="text"class="form-control"id="Comptenom"
+                     [(ngModel)]="compte.name" name="Comptenom">
+            </div>
+            <div class="form-group">
+                 <label>Currency</label>
+                 <input type="text"class="form-control"id="Currencydesc"
+                     [(ngModel)]="compte.currency" name="Currencydesc" >
+            </div>
+            <div class="form-group">
+                 <label>Balance</label>
+                 <input type="text"class="form-control"id="Comptebalance"
+                     [(ngModel)]="compte.balance" name="Comptebalance">
+            </div>
+          <button class="btn btn-success" type="submit">Submit</button>
+        </form>
+        </div>
+    </div>

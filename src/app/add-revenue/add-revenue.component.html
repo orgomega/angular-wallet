@@ -1,0 +1,63 @@
+<div class="main-content">
+<div class="col-md-8 offset-md-3" >
+    <h1>Add Revenue</h1>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+             <label>name</label>
+             <input type="text"class="form-control"id="revenuenom"
+                 [(ngModel)]="revenue.nom" name="revenuenom" placeholder="Revenue name">
+        </div>
+        <div class="form-group">
+             <label>description</label>
+             <input type="text"class="form-control"id="revenuedesc"
+                 [(ngModel)]="revenue.description" name="revenuedesc" placeholder="Note" >
+        </div>
+        <div class="form-group">
+             <label>date</label>
+             <input type="date"class="form-control"id="revenuedate"
+                 [(ngModel)]="revenue.dat_ver" name="revenuedate">
+        </div>
+        <div class="form-group">
+             <label>type</label>
+             <input list="type"  class="custom-select" id="revenuetype"
+                 [(ngModel)]="revenue.type" name="revenuetype"  placeholder="select Type">
+                 <datalist id="type" >
+                    <option value="yearly">
+                    <option value="monthly">
+                    <option value="One time">
+                </datalist>
+      </div>
+      <div class="form-group">
+            <label>Category</label>
+            <input list="category"  class="custom-select" id="revenuecategory"
+                [(ngModel)]="revenue.category" name="revenuecategory" placeholder="select Category">
+                <datalist id="category" >
+                    <option value="Financial Revenue">
+                    <option value="Salary">
+                    <option value="Litte Jobs">
+                    <option value="pension">
+                    <option value="Epagne">
+                    <option value="Other">
+                </datalist>
+      </div>
+      <div class="form-group">
+            <label>Compte:</label>
+            <input list="comptes"  class="custom-select" [(ngModel)]="name" placeholder="select an account">
+            <datalist id="comptes">
+                <select>
+                     <option *ngFor="let compte of comptes" value="{{compte.name}}">
+                     <span>Bank Account</span>
+                     <option *ngFor="let carte of cartes" value="{{carte.name}}">
+                     <span>Credit Card</span>
+                </select>
+            </datalist>
+      </div>
+      <div class="form-group">
+        <label>montant</label>
+        <input type="text"class="form-control"id="revenuemontant"
+            [(ngModel)]="revenue.montant" name="revenuemontant" placeholder="Ammount" >
+      </div>
+      <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+    </div>
+</div>

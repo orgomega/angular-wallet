@@ -1,0 +1,60 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-6 ">
+            <button (click)="addDette()" class="btn btn-primary " >add Debt</button>
+        </div>    
+        <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title ">Debts Table</h4>
+                <p class="card-category"> Here is a subtitle for this table</p>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Value
+                            </th>
+                            <th>
+                                Date
+                            </th>  
+                            <th>
+                                Pay_Date
+                            </th>  
+                            <th>
+                                From
+                            </th>
+                            <th>
+                                Compte
+                            </th> 
+                            <th>
+                                Actions
+                            </th>                           
+                        </thead>
+                        <tbody>
+                          <tr *ngFor ="let dette of dettes">
+                              <td>{{dette.name }}</td>
+                              <td>{{dette.value }}</td>
+                              <td>{{dette.date}}</td>
+                              <td>{{dette.pay_date}}</td>
+                              <td>{{dette.from}}</td>
+                              <td>{{dette.compte.name}}</td>
+                              <td>
+                                  <button (click)="updateDette(dette.id)" class="btn btn-info">Update</button>
+                                  <button (click)="deleteDette(dette.id)" class="btn btn-danger" style="margin-left:10px;">Delete</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+  </div>
+</div>

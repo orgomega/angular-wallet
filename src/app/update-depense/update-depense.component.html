@@ -1,0 +1,54 @@
+<div class="main-content">
+    <div class="col-md-8 offset-md-3" >
+    <h1>Update Depense</h1>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+             <label>name</label>
+             <input type="text"class="form-control"id="depensenom"
+                 [(ngModel)]="depense.nom" name="depensenom">
+        </div>
+        <div class="form-group">
+             <label>description</label>
+             <input type="text"class="form-control"id="depensedesc"
+                 [(ngModel)]="depense.description" name="depensedesc" >
+        </div>
+        <div class="form-group">
+             <label>date</label>
+             <input type="date"class="form-control"id="depensedate"
+                 [(ngModel)]="depense.dat_ret" name="depensedate">
+        </div>
+        <div class="form-group">
+            <label>type</label>
+            <input list="type"  class="custom-select" id="Depensetype"
+                [(ngModel)]="depense.type" name="Depensetype" placeholder="select Type">
+                <datalist id="type" >
+                   <option value="yearly">
+                   <option value="monthly">
+                   <option value="One time">
+               </datalist>
+      </div>
+        <div class="form-group">
+            <label>Category</label>
+            <input list="category"  class="custom-select"
+                [(ngModel)]="depense.category" name="depensecategory" placeholder="select Category">
+                <datalist id="category" >
+                    <option value="Alimentation">
+                    <option value="Couses">
+                    <option value="Trasport">
+                    <option value="Entertainement">
+                    <option value="Family">
+                    <option value="Health/Sport">
+                    <option value="Pets">
+                    <option value="Travel">
+                    <option value="Other">
+                </datalist>
+        </div>
+      <div class="form-group">
+        <label>montant</label>
+        <input type="text"class="form-control"id="depensemontant"
+            [(ngModel)]="depense.montant" name="depensemontant">
+      </div>
+      <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+        </div>
+</div>

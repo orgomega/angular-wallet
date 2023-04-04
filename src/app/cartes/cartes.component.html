@@ -1,0 +1,52 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-6 ">
+            <button (click)="addCarte()" class="btn btn-primary " >add Card</button>
+        </div>    
+        <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title ">Card Table</h4>
+                <p class="card-category"> Here is a subtitle for this table</p>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Limit
+                            </th>
+                            <th>
+                                Interest_rate
+                            </th>  
+                            <th>
+                                Compte
+                            </th>
+                            <th>
+                                Actions
+                            </th>                            
+                        </thead>
+                        <tbody>
+                          <tr *ngFor ="let carte of cartes">
+                              <td>{{carte.name }}</td>
+                              <td>{{carte.limit }}</td>
+                              <td>{{carte.interest_rate}}</td>
+                              <td>{{carte.compte.name}}</td>
+                              <td>
+                                  <button (click)="updateCarte(carte.id)" class="btn btn-info">Update</button>
+                                  <button (click)="deleteCarte(carte.id)" class="btn btn-danger" style="margin-left:10px;">Delete</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+  </div>
+</div>

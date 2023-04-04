@@ -1,0 +1,23 @@
+<div class="main-content">
+    <div class="col-md-8 offset-md-3" >
+    <h1>Update Carte</h1>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+             <label>Name</label>
+             <input type="text"class="form-control"id="cartenom"
+                 [(ngModel)]="carte.name" name="cartenom">
+        </div>
+        <div class="form-group">
+             <label>Limit</label>
+             <input type="text"class="form-control"id="cartelimit"
+                 [(ngModel)]="carte.limit" name="cartelimit" >
+        </div>
+        <div class="form-group">
+             <label>Interest_rate</label>
+             <input type="text"class="form-control"id="carteinterest_rate"
+                 [(ngModel)]="carte.interest_rate" name="carteinterest_rate">
+        </div>
+      <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+        </div>
+</div>

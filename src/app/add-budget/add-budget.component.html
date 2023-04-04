@@ -1,0 +1,35 @@
+<div class="main-content">
+    <div class="col-md-8 offset-md-3" >
+        <h1>Add Budget</h1>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                 <label>Name</label>
+                 <input type="text"class="form-control"id="Budgetnom"
+                     [(ngModel)]="budget.name" name="Budgetnom">
+            </div>
+            <div class="form-group">
+                 <label>Value</label>
+                 <input type="text"class="form-control"id="Budgetvalue"
+                     [(ngModel)]="budget.value" name="Budgetvalue" >
+            </div>
+            <div class="form-group">
+                 <label>Duration</label>
+                 <input type="date"class="form-control"id="Budgetduration"
+                     [(ngModel)]="budget.duration" name="Budgetduration">
+            </div>
+            <div class="form-group">
+                 <label>Category</label>
+                 <input type="text"class="form-control"id="Budgetcategory"
+                     [(ngModel)]="budget.category" name="Budgetcategory">
+            </div>
+            <div class="form-group">
+                <label>Compte:</label>
+                    <input list="comptes"  class="custom-select" [(ngModel)]="name">
+                    <datalist id="comptes" >
+                        <option *ngFor="let compte of comptes" value="{{compte.name}}">
+                    </datalist>
+         </div>
+          <button class="btn btn-success" type="submit">Submit</button>
+        </form>
+        </div>
+    </div>

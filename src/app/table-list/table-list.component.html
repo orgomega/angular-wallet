@@ -1,0 +1,118 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 ">
+          <button (click)="addRevenue()" class="btn btn-primary " >add revenue</button>
+          <button (click)="addDepense()" class="btn btn-info ">add expense </button>
+        </div>
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Revenues Table</h4>
+                      <p class="card-category"> Here is a subtitle for this table</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>
+                                      Name
+                                  </th>
+                                  <th>
+                                      Desc
+                                  </th>
+                                  <th>
+                                      Date
+                                  </th>
+                                  <th>
+                                      Type
+                                  </th>
+                                  <th>
+                                      Montant
+                                  </th> 
+                                  <th>
+                                    Category
+                                </th> 
+                                <th>
+                                    Compte
+                                </th>   
+                                  <th>Actions</th>                               
+                              </thead>
+                              <tbody>
+                                <tr *ngFor ="let revenue of revenues">
+                                    <td>{{revenue.nom }}</td>
+                                    <td>{{revenue.description }}</td>
+                                    <td>{{revenue.dat_ver}}</td>
+                                    <td>{{revenue.type }}</td>
+                                    <td>{{revenue.montant}}</td>
+                                    <td>{{revenue.category}}</td>
+                                    <td>{{revenue.compte.name}}</td>
+                                    <td>
+                                        <button (click)="updateRevenue(revenue.id)" class="btn btn-info">Update</button>
+                                        <button (click)="deleteRevenue(revenue.id)" class="btn btn-danger" style="margin-left:10px;">Delete</button>
+                                        <button (click)="viewRevenue(revenue.id)" class="btn btn-info" style="margin-left:10px;">View</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-12">
+              <div class="card ">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title mt-0">Expenses Table</h4>
+                      <p class="card-category"> Here is a subtitle for this table</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table ">
+                              <thead class="text-primary">
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Desc
+                                </th>
+                                <th>
+                                    Date
+                                </th>
+                                <th>
+                                    Type
+                                </th>
+                                <th>
+                                    Montant
+                                </th> 
+                                <th>
+                                    Category
+                                </th> 
+                                <th>
+                                    Compte
+                                </th>
+                                <th>Actions</th>
+                              </thead>
+                              <tbody>
+                                <tr *ngFor ="let depense of depenses">
+                                    <td>{{depense.nom }}</td>
+                                    <td>{{depense.description }}</td>
+                                    <td>{{depense.dat_ret}}</td>
+                                    <td>{{depense.type }}</td>
+                                    <td>{{depense.montant }}</td>
+                                    <td>{{depense.category}}</td>
+                                    <td>{{depense.compte.name}}</td>
+                                    <td>
+                                        <button (click)="updateDepense(depense.id)" class="btn btn-info">Update</button>
+                                        <button (click)="deleteDepense(depense.id)" class="btn btn-danger" style="margin-left:10px;">Delete</button>
+                                        <button (click)="viewDepense(depense.id)" class="btn btn-info" style="margin-left:10px;">View</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

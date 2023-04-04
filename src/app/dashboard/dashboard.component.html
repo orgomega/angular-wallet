@@ -1,0 +1,145 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="d-flex justify-content-center">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-success card-header-icon">
+                      <div class="card-icon">
+                          <i class="material-icons">store</i>
+                      </div>
+                      <p class="card-category">Revenues Of Last Year</p>
+                      <h3 class="card-title">{{revenue_ans}} DT</h3>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons">date_range</i> recently updated
+                      </div>
+                  </div>
+              </div>
+          </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">store</i>
+                        </div>
+                        <p class="card-category">Expenses Of Last Year</p>
+                        <h3 class="card-title">{{depense_ans}} DT</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">date_range</i> recently updated
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-info card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">store</i>
+                        </div>
+                        <p class="card-category">Net Revenues</p>
+                        <h3 class="card-title">{{revenue_ans-depense_ans}} DT</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">date_range</i> recently updated
+                        </div>
+                    </div>
+                </div>
+            </div>   
+      </div>
+      <div class="d-flex justify-content">
+      <div class="col-lg-10 ">
+      <div class="row justify-content">
+          <div class="col-lg-6">
+              <div class="card card-chart">
+                  <div class="card-header card-header-success">
+                      <div class="ct-chart" id="dailySalesChart"></div>
+                  </div>
+                  <div class="card-body">
+                      <h4 class="card-title">Daily Revenues</h4>
+                      <p class="card-category">
+                           last Week's Revenues</p>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons">access_time</i> recently updated
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6">
+              <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                      <div class="ct-chart" id="websiteViewsChart"></div>
+                  </div>
+                  <div class="card-body">
+                      <h4 class="card-title">Monthly revenues</h4>
+                      <p class="card-category">Last Year Revenues</p>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons">access_time</i> recently updated
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row justify-content">
+      <div class="col-lg-6">
+        <div class="card card-chart">
+            <div class="card-header card-header-primary">
+                <div class="ct-chart" id="DailyExpenses"></div>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Daily Expenses</h4>
+                <p class="card-category">Last Week Expenses</p>
+            </div>
+            <div class="card-footer">
+                <div class="stats">
+                    <i class="material-icons">access_time</i> recently updated
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card card-chart">
+            <div class="card-header card-header-info">
+                <div class="ct-chart" id="MonthlyExpenses"></div>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Monthly Expenses</h4>
+                <p class="card-category">Last Year Expenses</p>
+            </div>
+            <div class="card-footer">
+                <div class="stats">
+                    <i class="material-icons">access_time</i> recently updated
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+      </div>
+      <div class="col">
+       <div class="card card-body " style="background-color: rgba(29, 22, 22, 0.216);">
+        <h4 style="color: black;">Bank Accounts: </h4>
+        <div *ngFor="let compte of comptes">
+         <h6 style="color: rgb(75, 2, 2);">{{compte.name}}:</h6> 
+         <h6 style="color: rgb(0, 155, 0);">Balance :{{compte.balance}} {{compte.currency}}</h6> 
+         <h6 style="color: whitesmoke;">________________________________________</h6>
+        </div>
+       </div>
+      </div>
+      </div>
+      <div class="d-flex justify-content" >
+        <div class="col-lg-5 ">
+            <revenue-donut></revenue-donut>
+        </div>
+        <div class="col-lg-5 ">
+            <depense-donut></depense-donut>
+        </div>
+      </div>
+  </div>
+</div>

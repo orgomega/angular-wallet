@@ -1,0 +1,28 @@
+<div class="main-content">
+    <div class="col-md-8 offset-md-3" >
+    <h1>Update Budget</h1>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+             <label>Name</label>
+             <input type="text"class="form-control"id="budgetnom"
+                 [(ngModel)]="budget.name" name="budgetnom">
+        </div>
+        <div class="form-group">
+             <label>Value</label>
+             <input type="text"class="form-control"id="budgetvalue"
+                 [(ngModel)]="budget.value" name="budgetvalue" >
+        </div>
+        <div class="form-group">
+             <label>Duration</label>
+             <input type="text"class="form-control"id="budgetduration"
+                 [(ngModel)]="budget.duration" name="budgetduration">
+        </div>
+        <div class="form-group">
+            <label>Category</label>
+            <input type="text"class="form-control"id="budgetcategory"
+                [(ngModel)]="budget.category" name="budgetcategory">
+       </div>
+      <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+        </div>
+</div>

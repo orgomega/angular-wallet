@@ -1,0 +1,30 @@
+<div class="main-content">
+    <div class="col-md-8 offset-md-3" >
+        <h1>Add Carte</h1>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                 <label>Name</label>
+                 <input type="text"class="form-control"id="Cartenom"
+                     [(ngModel)]="carte.name" name="Cartenom">
+            </div>
+            <div class="form-group">
+                 <label>Limit</label>
+                 <input type="text"class="form-control"id="Cartelimit"
+                     [(ngModel)]="carte.limit" name="Cartelimit" >
+            </div>
+            <div class="form-group">
+                 <label>Interest_rate</label>
+                 <input type="text"class="form-control"id="Carteinterest_rate"
+                     [(ngModel)]="carte.interest_rate" name="Carteinterest_rate">
+            </div>
+            <div class="form-group">
+                <label>Compte:</label>
+                    <input list="comptes"  class="custom-select" [(ngModel)]="name">
+                    <datalist id="comptes" >
+                        <option *ngFor="let compte of comptes" value="{{compte.name}}">
+                    </datalist>
+            </div>
+          <button class="btn btn-success" type="submit">Submit</button>
+        </form>
+        </div>
+    </div>

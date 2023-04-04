@@ -1,0 +1,48 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-6 ">
+            <button (click)="addCompte()" class="btn btn-primary " >add Account</button>
+        </div>    
+        <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title ">Account Table</h4>
+                <p class="card-category"> Here is a subtitle for this table</p>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Currency
+                            </th>
+                            <th>
+                                Balance
+                            </th>  
+                            <th>
+                                Actions
+                            </th>                            
+                        </thead>
+                        <tbody>
+                          <tr *ngFor ="let compte of comptes">
+                              <td>{{compte.name }}</td>
+                              <td>{{compte.currency }}</td>
+                              <td>{{compte.balance}}</td>
+                              <td>
+                                  <button (click)="updateCompte(compte.id)" class="btn btn-info">Update</button>
+                                  <button (click)="deleteCompte(compte.id)" class="btn btn-danger" style="margin-left:10px;">Delete</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+  </div>
+</div>

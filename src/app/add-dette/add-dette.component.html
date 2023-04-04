@@ -1,0 +1,40 @@
+<div class="main-content">
+    <div class="col-md-8 offset-md-3" >
+        <h1>Add Dette</h1>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                 <label>Name</label>
+                 <input type="text"class="form-control"id="Dettenom"
+                     [(ngModel)]="dette.name" name="Dettenom">
+            </div>
+            <div class="form-group">
+                 <label>Value</label>
+                 <input type="text"class="form-control"id="Dettevalue"
+                     [(ngModel)]="dette.value" name="Dettevalue" >
+            </div>
+            <div class="form-group">
+                 <label>Date</label>
+                 <input type="date"class="form-control"id="Dettedate"
+                     [(ngModel)]="dette.date" name="Dettedate">
+            </div>
+            <div class="form-group">
+                <label>Pay_date</label>
+                <input type="date"class="form-control"id="Dettepay_date"
+                    [(ngModel)]="dette.pay_date" name="Dettepay_date">
+           </div>
+           <div class="form-group">
+            <label>From</label>
+            <input type="text"class="form-control"id="Dettefrom"
+                [(ngModel)]="dette.from" name="Dettefrom">
+       </div>
+            <div class="form-group">
+                <label>Compte:</label>
+                    <input list="comptes"  class="custom-select" [(ngModel)]="name">
+                    <datalist id="comptes" >
+                        <option *ngFor="let compte of comptes" value="{{compte.name}}">
+                    </datalist>
+         </div>
+          <button class="btn btn-success" type="submit">Submit</button>
+        </form>
+        </div>
+    </div>
